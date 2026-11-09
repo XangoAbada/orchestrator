@@ -3,3 +3,4 @@ projects.json
 tasks.json
 __pycache__/
 .claude/settings.local.json
+TASKS.md
