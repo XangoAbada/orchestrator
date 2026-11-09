@@ -1,0 +1,5 @@
+# dane tej maszyny: orch tworzy je sam (projekty buduje `orch scan`)
+projects.json
+tasks.json
+__pycache__/
+.claude/settings.local.json

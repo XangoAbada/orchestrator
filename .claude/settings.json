@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python orch.py *)",
+      "Bash(hc read *)",
+      "Bash(hc ls *)",
+      "Bash(hc get *)",
+      "Bash(herdr-app ls)"
+    ],
+    "deny": ["Edit", "Write", "NotebookEdit"]
+  }
+}
