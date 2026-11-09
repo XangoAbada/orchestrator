@@ -142,6 +142,7 @@ def started(title):
 
 tid, term = started("Czyste")  # w demo tylko TASKS.md i IDEA.md (pisze je orch), to się nie liczy
 assert "Zamknięto okno" in orch("edit", tid, "--status", "done") and kills() == [term]
+assert "ma status done" in orch("start", tid, code=1) and db()[tid]["status"] == "done"
 
 tid, term = started("Brudne")
 (demo / "kod.py").write_text("x = 1")

@@ -603,6 +603,8 @@ def cmd_start(a):
     alive = live() or {}
     if t["status"] == "running" and t.get("terminal") in alive:
         die(f"{tid} już działa w {t['terminal']}.")
+    if t["status"] in ("done", "review") and not a.force:
+        die(f"{tid} ma status {t['status']}. Uruchom mimo to: --force.")
     waiting = graph(db)[tid]["waiting"]
     if waiting and not a.force:
         die(f"{tid} jest zablokowane, czeka na: {', '.join(waiting)} (jeszcze nie done).\n"
